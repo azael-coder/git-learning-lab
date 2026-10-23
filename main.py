@@ -1,4 +1,7 @@
 def motor_status(current):
-    print(f"Motor current: {current} A")
+    if current > 20:
+        return "OVERLOAD"
+    return "NORMAL"
 
-motor_status(16)
+print(motor_status(15))
+print(motor_status(25))
